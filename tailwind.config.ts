@@ -9,8 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'pink100': '#db6885',
+        'pink50': '#ffd3d7',
+        'pink25': "#f5eaeb",
+        'pink10': "#fff4f5",
+        'black100': '#2f3137',
+        'black50': '#707070',
+        'grey10': "#c7c7c7",
+        'yellow': '#ffc107',
       },
     },
   },
