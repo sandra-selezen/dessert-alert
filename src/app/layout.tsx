@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Figtree, Fredoka } from "next/font/google";
+
+import { Header } from "@/components/Header/Header";
+
 import "./globals.css";
 
 const figtree = Figtree({
@@ -27,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${figtree.variable} ${fredoka.variable}`}>
       <body>
+        <Header />
         {children}
       </body>
     </html>
