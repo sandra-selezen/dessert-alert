@@ -17,6 +17,7 @@ const config: Config = {
         'black50': '#707070',
         'grey10': "#c7c7c7",
         'yellow': '#ffc107',
+        'white': '#ffffff',
       },
     },
   },

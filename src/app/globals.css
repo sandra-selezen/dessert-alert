@@ -5,8 +5,65 @@
 :root {
   --font-figtree: "Figtree", sans-serif;
   --font-fredoka: "Fredoka", sans-serif;
+  --pink-100: #db6885;
+  --pink-50: #ffd3d7;
+  --pink-25: #f5eaeb;
+  --pink-10: #fff4f5;
+  --white: #ffffff;
+  --black-100: #2f3137;
 }
 
 body {
   font-family: var(--font-figtree);
+  color: var(--black-100);
+}
+
+/* Heading */
+
+.pink-subtitle {
+  font-family: var(--font-fredoka);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--pink-100);
+
+  @screen lg {
+    font-size: 28px;
+  }
+}
+
+@layer utilities {
+  .h1 {
+    @apply text-[38px] lg:text-[70px] font-bold;
+  }
+  .h2 {
+    @apply text-[28px] lg:text-[54px] font-bold;
+  }
+}
+
+/* Footer */
+
+.footer {
+  height: 500px;
+  background-color: var(--pink-100);
+  background-image: url("../../public/images/bg-footer-d.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer-title {
+  font-size: 2.375rem;
+  font-weight: 700;
+  color: var(--white);
+
+  @screen lg {
+    font-size: 4.375rem;
+  }
+}
+
+.author {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--white);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
