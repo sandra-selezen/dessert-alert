@@ -6,14 +6,15 @@ import { SubscribeForm } from "../Forms/SubscribeForm";
 export const Footer = () => {
   return (
     <footer className="footer">
-      <div className="py-12 md:py-20">
-        <div>
+      <div className="container mx-auto py-12 md:py-20 px-4">
+        <div className="flex items-center flex-col gap-y-6 lg:flex-row lg:gap-x-14">
           <h2 className="footer-title">Newsletter Subscribe</h2>
           <div>
             <SubscribeForm />
           </div>
         </div>
-        <div>
+        <div className="my-8 lg:my-16 border-t border-white"></div>
+        <div className="px-4">
           <Image src={logoWhite} width={76} height={32} alt="logo" />
         </div>
       </div>

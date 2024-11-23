@@ -19,6 +19,12 @@ const config: Config = {
         'yellow': '#ffc107',
         'white': '#ffffff',
       },
+      boxShadowColor: {
+        'pink': 'rgba(174, 19, 57, 0.34)',
+      },
+      borderColor: {
+        'white': 'rgba(255, 255, 255, 0.4)',
+      }
     },
   },
   plugins: [],

@@ -18,6 +18,10 @@ body {
   color: var(--black-100);
 }
 
+input {
+  @apply border border-solid bg-transparent rounded-full py-5 px-10 focus:outline-none;
+}
+
 /* Heading */
 
 .pink-subtitle {
@@ -40,15 +44,17 @@ body {
   }
 }
 
+
+
 /* Footer */
 
 .footer {
-  height: 500px;
+  /* height: 500px; */
   background-color: var(--pink-100);
   background-image: url("../../public/images/bg-footer-d.png");
   background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .footer-title {
