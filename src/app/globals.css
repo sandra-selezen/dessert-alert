@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --font-figtree: "Figtree", sans-serif;
-  --font-fredoka: "Fredoka", sans-serif;
   --pink-100: #db6885;
   --pink-50: #ffd3d7;
   --pink-25: #f5eaeb;
@@ -44,12 +42,9 @@ input {
   }
 }
 
-
-
 /* Footer */
 
 .footer {
-  /* height: 500px; */
   background-color: var(--pink-100);
   background-image: url("../../public/images/bg-footer-d.png");
   background-position: top;
