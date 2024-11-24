@@ -20,9 +20,9 @@ export const SubscribeForm = () => {
       onSubmit={onSubmitForm}
     >
       <Form
-        className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-5"
+        className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-5 items-center"
       >
-        <div className="lg:w-96">
+        <div className="w-full">
           <Field
             required
             id='email'
@@ -34,7 +34,7 @@ export const SubscribeForm = () => {
         </div>
         <button
           type="submit"
-          className="rounded-full py-5 px-10 bg-white text-pink100 hover:shadow-md shadow-pink font-medium"
+          className="w-48 flex-none rounded-full py-5 px-10 bg-white text-pink100 hover:shadow-md shadow-pink font-medium transition-shadow"
         >
           Subscribe Now
         </button>

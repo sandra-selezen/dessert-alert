@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        figtree: "var(--font-figtree)",
+        fredoka: "var(--font-fredoka)",
+      },
       colors: {
         'pink100': '#db6885',
         'pink50': '#ffd3d7',

@@ -55,6 +55,7 @@ input {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  color: var(--white);
 }
 
 .footer-title {
