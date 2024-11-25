@@ -25,6 +25,7 @@ const config: Config = {
       },
       boxShadowColor: {
         'pink': 'rgba(174, 19, 57, 0.34)',
+        'gray': 'rgba(5, 12, 17, 0.17)'
       },
       borderColor: {
         'white': 'rgba(255, 255, 255, 0.4)',
