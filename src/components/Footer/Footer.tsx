@@ -48,21 +48,21 @@ export const Footer = () => {
             <div className="mt-10 flex gap-x-5">
               <Link
                 href="#"
-                className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75"
+                className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75 transition-opacity"
                 aria-label="Facebook"
               >
                 <FacebookIcon />
               </Link>
               <Link
                 href="#"
-                className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75"
+                className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75 transition-opacity"
                 aria-label="Instagram"
               >
                 <InstagramIcon />
               </Link>
               <Link
                 href="#"
-                className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75"
+                className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75 transition-opacity"
                 aria-label="WhatsApp"
               >
                 <WhatsappIcon />

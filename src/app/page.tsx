@@ -30,14 +30,14 @@ export default function Home() {
             <h1 className="h1 mb-6">Super Delichious Food Special for You</h1>
             <p className="text-black50 text-lg">Order your favorites food from anywhere and get delivery at your door</p>
             <div className="my-8 flex gap-x-4">
-              <PrimaryButton type="button">Order Now</PrimaryButton>
-              <SecondaryButton type="button">Learn More</SecondaryButton>
+              <PrimaryButton href="/menu">Order Now</PrimaryButton>
+              <SecondaryButton href="/about">Learn More</SecondaryButton>
             </div>
             <p className="text-black50 text-sm">For Better Service Download Our Mobile App Now</p>
             <div className="flex gap-x-4 mt-8">
               <Link
                 href="#"
-                className="block mb-6"
+                className="block"
                 aria-label="Google Play"
               >
                 <Image src={googlePlay} width={145} height={44} alt="Google Play" className="w-40" />
@@ -117,12 +117,12 @@ export default function Home() {
         <div className="max-w-lg">
           <p className="mb-4 text-2xl font-fredoka font-semibold text-pink100">About us</p>
           <h2 className="h2 mb-4">Welcome to Fofood</h2>
-          <p className="text-black50 text-base/8 mb-6">
+          <p className="text-black50 text-base/8">
             Welcome to Fofood, where we're committed to combating food deserts.
             Our goal is to ensure everyone has access to fresh, healthy, and affordable food, regardless of their location.
             Join us in creating a brighter future for all.
           </p>
-          <SecondaryButton type="button">Read More</SecondaryButton>
+          <SecondaryButton href="/about" clasName="mt-6 inline-block">Read More</SecondaryButton>
         </div>
       </section>
       <section className="pb-20 lg:pb-36 px-4">
@@ -139,7 +139,7 @@ export default function Home() {
             />
             <div className="flex-grow flex flex-col justify-between mt-6">
               <h3 className="text-xl/9 font-semibold mb-6 break-words line-clamp-2">How To Cook The Sweet Cupcakes with Strawberry Honey</h3>
-              <div className="mt-auto"><Link href="#" className="flex items-center gap-2 font-fredoka font-semibold text-pink100">Read More <ArrowForward /></Link></div>
+              <div className="mt-auto"><Link href="#" className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity">Read More <ArrowForward /></Link></div>
             </div>
           </li>
           <li className="max-w-[343px] lg:max-w-[364px] flex flex-col">
@@ -152,7 +152,7 @@ export default function Home() {
             />
             <div className="flex-grow flex flex-col justify-between mt-6">
               <h3 className="text-xl/9 font-semibold mb-6 break-words line-clamp-2">Donut topping recommendations for donut lovers</h3>
-              <div className="mt-auto"><Link href="#" className="flex items-center gap-2 font-fredoka font-semibold text-pink100">Read More <ArrowForward /></Link></div>
+              <div className="mt-auto"><Link href="#" className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity">Read More <ArrowForward /></Link></div>
             </div>
           </li>
           <li className="max-w-[343px] lg:max-w-[364px] flex flex-col">
@@ -165,7 +165,7 @@ export default function Home() {
             />
             <div className="flex-grow flex flex-col justify-between mt-6">
               <h3 className="text-xl/9 font-semibold mb-6 break-words line-clamp-2">How To Cook The Sweet Macarons with Strawberry Cream</h3>
-              <div className="mt-auto"><Link href="#" className="flex items-center gap-2 font-fredoka font-semibold text-pink100">Read More <ArrowForward /></Link></div>
+              <div className="mt-auto"><Link href="#" className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity">Read More <ArrowForward /></Link></div>
             </div>
           </li>
         </ul>
