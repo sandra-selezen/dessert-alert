@@ -3,6 +3,10 @@ import Image from "next/image";
 import chef from "/public/images/chef.png";
 import kid from "/public/images/kid.png";
 import videoImg from "/public/images/video-image-min.png";
+import customer from "/public/images/customer-03.png";
+import chef1 from "/public/images/chef-01.png";
+import chef2 from "/public/images/chef-02.png";
+import chef3 from "/public/images/chef-03.png";
 
 const AboutPage = () => {
   return (
@@ -95,6 +99,47 @@ const AboutPage = () => {
               Over the years, we have implemented various initiatives such as community gardens, mobile markets, and educational programs focused on nutrition and culinary skills.
               By fostering community engagement and leveraging technology, we have amplified our impact and connected individuals to vital resources.
               Our history is rooted in the success stories of individuals and families who have gained improved access to nutritious food, leading to enhanced well-being and a stronger sense of community.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="pb-20 lg:pb-36 px-4">
+        <p className="mb-4 text-2xl font-fredoka text-center font-semibold text-pink100">Our Chef</p>
+        <h2 className="h2 mb-8 lg:mb-24 text-center">Meet Our Talented Chef</h2>
+        <div className="container mx-auto justify-center flex flex-col lg:flex-row gap-8 lg:gap-16">
+          <div className="max-[925px]:mx-auto">
+            <div className="relative w-[330px] h-[415px] mb-6 px-6 bg-pink50 rounded-[32px]">
+              <Image src={chef1} width={320} height={512} alt="Chef" className="w-full h-full object-contain" />
+            </div>
+            <h3 className="mb-2 font-bold text-center text-2xl">Chef Ethan Mitchell</h3>
+            <p className="text-center text-black50 text-xl">Executive Chef</p>
+          </div>
+          <div className="max-[925px]:mx-auto max-[925px]:mt-20">
+            <div className="relative w-[330px] h-[415px] mb-6 px-6 bg-pink50 rounded-[32px]">
+              <Image src={chef2} width={320} height={512} alt="Chef" className="absolute bottom-0 left-1/2 translate-x-[-50%]" />
+            </div>
+            <h3 className="mb-2 font-bold text-center text-2xl">Chef Marcus Thompson</h3>
+            <p className="text-center text-black50 text-xl">Head Chef</p>
+          </div>
+          <div className="max-[925px]:mx-auto">
+            <div className="relative w-[330px] h-[415px] mb-6 px-6 bg-pink50 rounded-[32px]">
+              <Image src={chef3} width={320} height={512} alt="Chef" className="w-full h-full object-contain" />
+            </div>
+            <h3 className="mb-2 font-bold text-center text-2xl">Chef Alexander Scott</h3>
+            <p className="text-center text-black50 text-xl">Food Advocate</p>
+          </div>
+        </div>
+      </section>
+      <section className="pb-20 lg:pb-36 px-4">
+        <div className="container mx-auto bg-pink10 bg-cupcake-pattern bg-top bg-no-repeat bg-cover py-10 lg:py-20 px-4 rounded-[24px]">
+          <p className="mb-4 text-2xl font-fredoka text-center font-semibold text-pink100">Testimonial</p>
+          <h2 className="h2 mb-10 lg:mb-16 text-center">What People Say</h2>
+          <div className="max-w-[596px] mx-auto p-8 text-center bg-white rounded-[24px]">
+            <Image src={customer} alt="Customer" className="w-14 h-14 mx-auto mb-4 rounded-full border-4 border-white" />
+            <h3 className="mb-4 text-lg font-bold">It’s very delicious!</h3>
+            <p className="text-black50 text-base/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Amet venenatis a vel id tincidunt volutpat faucibus scelerisque.
+              Morbi eget turpis aliquet nunc, varius aliquam ipsum.
             </p>
           </div>
         </div>

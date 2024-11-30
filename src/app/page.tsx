@@ -24,6 +24,10 @@ import pinkSweet from "/public/images/pink-sweet.png";
 import chocoCookies from "/public/images/choco-cookies.png";
 import sweetDonuts from "/public/images/sweet-donuts.png";
 import sweetChoco from "/public/images/sweet-choco.png";
+import customer1 from "/public/images/customer-01.png";
+import customer2 from "/public/images/customer-02.png";
+import customer3 from "/public/images/customer-03.png";
+import customer4 from "/public/images/customer-04.png";
 
 import { PrimaryButton } from "@/components/Buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/Buttons/SecondaryButton";
@@ -42,6 +46,40 @@ export default function Home() {
               <SecondaryButton href="/about">Learn More</SecondaryButton>
             </div>
             <p className="text-black50 text-sm">For Better Service Download Our Mobile App Now</p>
+            <div className="flex items-center gap-4 mt-8 lg:mt-16">
+              <div className="flex -space-x-4">
+                <Image
+                  src={customer1}
+                  alt="Customer 1"
+                  className="w-14 h-14 rounded-full border-4 border-white"
+                />
+                <Image
+                  src={customer2}
+                  alt="Customer 2"
+                  className="w-14 h-14 rounded-full border-4 border-white"
+                />
+                <Image
+                  src={customer3}
+                  alt="Customer 3"
+                  className="w-14 h-14 rounded-full border-4 border-white"
+                />
+                <Image
+                  src={customer4}
+                  alt="Customer 4"
+                  className="w-14 h-14 rounded-full border-4 border-white"
+                />
+              </div>
+
+              <div>
+                <h3 className="text-sm font-bold">Our Happy Customers</h3>
+                <div className="flex items-center space-x-2 mt-2">
+                  <span className="text-yellow text-lg">★</span>
+                  <p className="text-sm">
+                    <span className="font-bold">4.9</span> (12.8k reviews)
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="flex gap-x-4 mt-8">
               <Link
                 href="#"
@@ -101,7 +139,7 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="max-w-max mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20 pb-20 lg:pb-36 px-4">
+      <section className="container max-w-max mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20 pb-20 lg:pb-36 px-4">
         <div className="flex gap-6">
           <div className="overflow-hidden w-[163px] h-[237px] lg:w-[259px] lg:h-[378px] relative -mt-6">
             <Image
@@ -183,10 +221,24 @@ export default function Home() {
         </div>
       </section>
       <section className="pb-20 lg:pb-36 px-4">
+        <div className="container mx-auto bg-pink10 bg-cupcake-pattern bg-top bg-no-repeat bg-cover py-10 lg:py-20 px-4 rounded-[24px]">
+          <p className="mb-4 text-2xl font-fredoka text-center font-semibold text-pink100">Testimonial</p>
+          <h2 className="h2 mb-10 lg:mb-16 text-center">What People Say</h2>
+          <div className="max-w-[596px] mx-auto p-8 text-center bg-white rounded-[24px]">
+            <Image src={customer3} alt="Customer" className="w-14 h-14 mx-auto mb-4 rounded-full border-4 border-white" />
+            <h3 className="mb-4 text-lg font-bold">It’s very delicious!</h3>
+            <p className="text-black50 text-base/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Amet venenatis a vel id tincidunt volutpat faucibus scelerisque.
+              Morbi eget turpis aliquet nunc, varius aliquam ipsum.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="pb-20 lg:pb-36 px-4">
         <p className="mb-4 text-2xl font-fredoka text-center font-semibold text-pink100">Our Blog</p>
         <h2 className="h2 mb-10 lg:mb-16 text-center">Latest Post</h2>
-        <ul className="max-w-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <li className="max-w-[343px] lg:max-w-[364px] flex flex-col">
+        <ul className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <li className="flex flex-col">
             <Image
               src={blog1}
               width={343}
@@ -199,7 +251,7 @@ export default function Home() {
               <div className="mt-auto"><Link href="#" className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity">Read More <ArrowForward /></Link></div>
             </div>
           </li>
-          <li className="max-w-[343px] lg:max-w-[364px] flex flex-col">
+          <li className="flex flex-col">
             <Image
               src={blog2}
               width={343}
@@ -212,7 +264,7 @@ export default function Home() {
               <div className="mt-auto"><Link href="#" className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity">Read More <ArrowForward /></Link></div>
             </div>
           </li>
-          <li className="max-w-[343px] lg:max-w-[364px] flex flex-col">
+          <li className="flex flex-col">
             <Image
               src={blog3}
               width={343}
