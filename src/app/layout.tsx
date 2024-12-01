@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${figtree.variable} ${fredoka.variable}`}>
       <body>
-        <Header />
+        {/* <Header /> */}
         {children}
         <Footer />
       </body>

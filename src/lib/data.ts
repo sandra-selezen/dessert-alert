@@ -14,6 +14,57 @@ import cookie from "/public/images/cookie.png";
 import macaron from "/public/images/macaron.png";
 import drink from "/public/images/drink.png";
 
+export const popularMenu = [
+  {
+    id: 1,
+    name: "Chococheese Cake",
+    price: 2.5,
+    image: chococheeseCake,
+  },
+  {
+    id: 2,
+    name: "Pink Donuts",
+    price: 2.8,
+    image: pinkDonuts,
+  },
+  {
+    id: 3,
+    name: "Choco Cake",
+    price: 2.9,
+    image: chocoCake,
+  },
+  {
+    id: 4,
+    name: "Sweet Cake",
+    price: 2.3,
+    image: sweetCake,
+  },
+  {
+    id: 5,
+    name: "Pink Sweet",
+    price: 2.1,
+    image: pinkSweet,
+  },
+  {
+    id: 6,
+    name: "Choco Cookies",
+    price: 2.8,
+    image: chocoCookies,
+  },
+  {
+    id: 7,
+    name: "Sweet Donuts",
+    price: 1.8,
+    image: sweetDonuts,
+  },
+  {
+    id: 8,
+    name: "Sweet Choco",
+    price: 3.6,
+    image: sweetChoco,
+  },
+];
+
 export const menu = [
   {
     id: 1,
