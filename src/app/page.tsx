@@ -25,6 +25,7 @@ import { PrimaryButton } from "@/components/Buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/Buttons/SecondaryButton";
 import { PopularMenu } from "@/components/PopularMenu/PopularMenu";
 import { HappyCustomer } from "@/components/HappyCustomer/HappyCustomer";
+import { categories } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -101,36 +102,16 @@ export default function Home() {
         <p className="text-center mb-4 text-2xl font-fredoka font-semibold text-pink100">Explore</p>
         <h2 className="h2 text-center mb-10 lg:mb-16">Our Delicious Menu</h2>
         <ul className="max-w-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          <li className="w-[260px] h-[260px] flex flex-col items-center p-5 border rounded-2xl border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition">
-            <Image src={cake} width={130} height={130} alt="cake" className="mb-5" />
-            <h3 className="mb-2 font-bold">Cakes</h3>
-            <p className="font-fredoka font-semibold text-pink100">24 Menu</p>
-          </li>
-          <li className="w-[260px] h-[260px] flex flex-col items-center p-5 border rounded-2xl border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition">
-            <Image src={cupcake} width={130} height={130} alt="cupcake" className="mb-5" />
-            <h3 className="mb-2 font-bold">Cupcakes</h3>
-            <p className="font-fredoka font-semibold text-pink100">25 Menu</p>
-          </li>
-          <li className="w-[260px] h-[260px] flex flex-col items-center p-5 border rounded-2xl border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition">
-            <Image src={donut} width={130} height={130} alt="donut" className="mb-5" />
-            <h3 className="mb-2 font-bold">Donuts</h3>
-            <p className="font-fredoka font-semibold text-pink100">35 Menu</p>
-          </li>
-          <li className="w-[260px] h-[260px] flex flex-col items-center p-5 border rounded-2xl border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition">
-            <Image src={cookie} width={130} height={130} alt="cookie" className="mb-5" />
-            <h3 className="mb-2 font-bold">Cookies</h3>
-            <p className="font-fredoka font-semibold text-pink100">24 Menu</p>
-          </li>
-          <li className="w-[260px] h-[260px] flex flex-col items-center p-5 border rounded-2xl border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition">
-            <Image src={macaron} width={130} height={130} alt="macaron" className="mb-5" />
-            <h3 className="mb-2 font-bold">Macarons</h3>
-            <p className="font-fredoka font-semibold text-pink100">25 Menu</p>
-          </li>
-          <li className="w-[260px] h-[260px] flex flex-col items-center p-5 border rounded-2xl border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition">
-            <Image src={drink} width={130} height={130} alt="drink" className="mb-5" />
-            <h3 className="mb-2 font-bold">Drinks</h3>
-            <p className="font-fredoka font-semibold text-pink100">22 Menu</p>
-          </li>
+          {categories.map((item) => (
+            <li
+              key={item.id}
+              className="w-[260px] h-[260px] flex flex-col items-center p-5 border rounded-2xl border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition"
+            >
+              <Image src={item.image} width={130} height={130} alt={item.title} className="mb-5" />
+              <h3 className="mb-2 font-bold">{item.title}</h3>
+              <p className="font-fredoka font-semibold text-pink100">{item.subtitle}</p>
+            </li>
+          ))}
         </ul>
       </section>
       <section className="container max-w-max mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20 pb-20 lg:pb-36 px-4">
