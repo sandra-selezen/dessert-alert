@@ -17,7 +17,7 @@ export const PopularMenu = () => {
           <li key={item.id} className="menu-item">
             <Image src={item.image} width={150} height={150} alt={item.name} className="mb-3" />
             <Link href={`/menu/${item.id}`} className="mb-2 font-bold">{item.name}</Link>
-            <span className="font-fredoka font-semibold text-pink100">{item.price}</span>
+            <span className="font-fredoka font-semibold text-pink100">${item.price}</span>
             <div className="button-wrapper">
               <button className="p-2 flex justify-center items-center rounded-full bg-transparent border border-solid border-pink100">
                 <HeartIcon />

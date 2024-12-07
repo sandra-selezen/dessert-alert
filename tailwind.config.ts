@@ -29,6 +29,7 @@ const config: Config = {
       },
       borderColor: {
         'white': 'rgba(255, 255, 255, 0.4)',
+        'light-gray': '#c8ccdb',
       },
       backgroundImage: {
         'cupcake-pattern': 'url("../../public/images/bg-review.png")',
