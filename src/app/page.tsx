@@ -137,7 +137,7 @@ export default function Home() {
             Our goal is to ensure everyone has access to fresh, healthy, and affordable food, regardless of their location.
             Join us in creating a brighter future for all.
           </p>
-          <SecondaryButton href="/about" clasName="mt-6 inline-block">Read More</SecondaryButton>
+          <SecondaryButton href="/about" className="mt-6 inline-block">Read More</SecondaryButton>
         </div>
       </section>
       <section className="pb-20 lg:pb-36 px-4">

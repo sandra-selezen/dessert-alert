@@ -1,11 +1,10 @@
-import React from 'react';
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 
 import HeartIcon from "../../../public/icons/favorite.svg";
 import CartIcon from "../../../public/icons/buy.svg";
-import { popularMenu } from '@/lib/data';
-import { SecondaryButton } from '../Buttons/SecondaryButton';
+import { popularMenu } from "@/lib/data";
+import { SecondaryButton } from "../Buttons/SecondaryButton";
 
 export const PopularMenu = () => {
   return (
@@ -31,7 +30,7 @@ export const PopularMenu = () => {
         ))}
       </ul>
       <div className="max-w-max mx-auto mt-10 lg:mt-20">
-        <SecondaryButton href="/menu" clasName="inline-block">See All Menu</SecondaryButton>
+        <SecondaryButton href="/menu" className="inline-block">See All Menu</SecondaryButton>
       </div>
     </>
   )
