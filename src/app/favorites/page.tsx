@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-import HeartIcon from "../../../public/icons/favorite.svg";
 import HeartIconFull from "../../../public/icons/favorite-full.svg";
 import { SecondaryButton } from "@/components/Buttons/SecondaryButton";
 
@@ -16,7 +15,7 @@ interface IFavorite {
 }
 
 const FavoritesPage = () => {
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState<IFavorite[]>([]);
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");

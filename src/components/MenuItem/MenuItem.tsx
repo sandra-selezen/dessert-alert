@@ -7,7 +7,7 @@ import HeartIcon from "../../../public/icons/favorite.svg";
 
 import { PrimaryButton } from "../Buttons/PrimaryButton";
 
-interface IMenuItem {
+interface IMenuItemProps {
   item: {
     id: number;
     name: string;
@@ -16,7 +16,7 @@ interface IMenuItem {
   }
 }
 
-export const MenuItem = ({ item }: IMenuItem) => {
+export const MenuItem = ({ item }: IMenuItemProps) => {
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => {
