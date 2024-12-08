@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 import Delete from "../../../public/icons/delete.svg";
 import { PrimaryButton } from "@/components/Buttons/PrimaryButton";
@@ -126,10 +127,16 @@ const MyCartPage = () => {
             </div>
             <PrimaryButton
               onClick={() => {}}
-              clasName="w-full"
+              clasName="w-full mb-6"
             >
               Checkout
             </PrimaryButton>
+            <Link
+              href="/menu"
+              className="underline text-pink100"
+            >
+              Continue Shopping
+            </Link>
           </div>
         </div>
       </section>
