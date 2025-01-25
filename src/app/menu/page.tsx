@@ -1,11 +1,21 @@
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { menu } from "@/lib/data";
 
 import { Categories } from "@/components/Categories/Categories";
-import Link from "next/link";
 
 const MenuPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const filteredProducts =
+    selectedCategory === "all"
+      ? menu
+      : menu.filter((product) => product.category === selectedCategory);
+
   return (
     <main>
       <section className="bg-pink10">
@@ -18,8 +28,8 @@ const MenuPage = () => {
         <div className="flex flex-col md:flex-row gap-16 md:gap-20">
           <div className="basis-1/4">
             <h3 className="mb-6 text-black50 font-bold text-2xl">Categories</h3>
-            <Categories />
-            <div>Banner</div>
+            <Categories selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory}/>
+            {/* <div>Banner</div> */}
           </div>
 
           <div className="basis-3/4">
@@ -28,7 +38,7 @@ const MenuPage = () => {
               <p className="font-fredoka font-semibold text-xl text-pink100">200 Menu</p>
             </div>
             <ul className="grid grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-20">
-              {menu.map((item) => (
+              {filteredProducts.map((item) => (
                 <li key={item.id} className="flex flex-col items-center">
                   <Image src={item.image} width={200} height={200} alt={item.name} className="mb-3" />
                   <Link href={`/menu/${item.id}`} className="mb-2 font-bold hover:text-pink100 hover:underline transition-all">{item.name}</Link>
