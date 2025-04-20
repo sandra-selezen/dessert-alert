@@ -15,11 +15,12 @@ import customer2 from "/public/images/customer-02.png";
 import customer3 from "/public/images/customer-03.png";
 import customer4 from "/public/images/customer-04.png";
 
+import { categories } from "@/lib/data";
+
 import { PrimaryButton } from "@/components/Buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/Buttons/SecondaryButton";
 import { PopularMenu } from "@/components/PopularMenu/PopularMenu";
 import { HappyCustomer } from "@/components/HappyCustomer/HappyCustomer";
-import { categories } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -96,16 +97,29 @@ export default function Home() {
         <p className="text-center mb-4 text-2xl font-fredoka font-semibold text-pink100">Explore</p>
         <h2 className="h2 text-center mb-10 lg:mb-16">Our Delicious Menu</h2>
         <ul className="max-w-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {categories.map((item) => (
-            <li
-              key={item.id}
-              className="w-[260px] h-[260px] flex flex-col items-center p-5 border rounded-2xl border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition"
-            >
-              <Image src={item.image} width={130} height={130} alt={item.title} className="mb-5" />
-              <h3 className="mb-2 font-bold">{item.title}</h3>
-              <p className="font-fredoka font-semibold text-pink100">{item.subtitle}</p>
+        {categories.map((item, index) => (
+          index !== 0 && (
+            <li key={item.id}>
+              <Link
+                href={{
+                  pathname: "/menu",
+                  query: { category: item.category },
+                }}
+                className="w-[260px] h-[260px] flex flex-col items-center p-5 border rounded-2xl border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition"
+              >
+                <Image
+                  src={item.image}
+                  width={130}
+                  height={130}
+                  alt={item.title}
+                  className="mb-5"
+                />
+                <h3 className="mb-2 font-bold">{item.title}</h3>
+                <p className="font-fredoka font-semibold text-pink100">{item.subtitle}</p>
+              </Link>
             </li>
-          ))}
+          )
+        ))}
         </ul>
       </section>
       <section className="container max-w-max mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20 pb-20 lg:pb-36 px-4">
