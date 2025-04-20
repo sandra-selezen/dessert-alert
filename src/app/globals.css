@@ -17,7 +17,11 @@ body {
 }
 
 input {
-  @apply border border-solid bg-transparent rounded-full py-5 px-10 focus:outline-none;
+  @apply border border-solid bg-transparent rounded-[32px] py-5 px-10 focus:outline-none;
+}
+
+textarea {
+  @apply border border-solid bg-transparent rounded-[32px] py-5 px-10 focus:outline-none;
 }
 
 /* Heading */

@@ -62,7 +62,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className=" mt-8 md:mt-12">
+        <div className="mt-8 md:mt-12">
           <div className="w-[58px] h-[58px] flex items-center justify-center text-pink100 font-fredoka font-bold text-2xl mb-6 rounded-full bg-pink10">02</div>
           <h3 className="font-bold mb-4">Commitment to Community</h3>
           <p className="text-black50 text-base/8">

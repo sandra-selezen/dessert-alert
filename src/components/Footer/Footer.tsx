@@ -110,8 +110,8 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:underline">
-                  Login
+                <Link href="/contacts" className="hover:underline">
+                  Contacts
                 </Link>
               </li>
               <li>
