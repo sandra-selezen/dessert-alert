@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { Suspense, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +9,7 @@ import { categories, menu } from "@/lib/data";
 
 import { Categories, ICategory } from "@/components/Categories/Categories";
 
-const MenuPage = () => {
+const MenuContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -72,5 +72,13 @@ const MenuPage = () => {
     </main>
   )
 }
+
+const MenuPage = () => {
+  return (
+    <Suspense fallback={<div>Loading menu...</div>}>
+      <MenuContent />
+    </Suspense>
+  );
+};
 
 export default MenuPage;
