@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const breakpoints = {
   small: 640, // <= 640px
@@ -7,25 +7,25 @@ const breakpoints = {
 };
 
 export const useViewport = () => {
-  const [breakpoint, setBreakpoint] = useState<"small" | "medium" | "large">("large");
+  const [breakpoint, setBreakpoint] = useState<'small' | 'medium' | 'large'>('large');
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
 
       if (width <= breakpoints.small) {
-        setBreakpoint("small");
+        setBreakpoint('small');
       } else if (width <= breakpoints.medium) {
-        setBreakpoint("medium");
+        setBreakpoint('medium');
       } else {
-        setBreakpoint("large");
+        setBreakpoint('large');
       }
     };
 
     handleResize();
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return { breakpoint };

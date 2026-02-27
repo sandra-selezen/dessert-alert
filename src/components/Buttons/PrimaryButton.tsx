@@ -1,15 +1,14 @@
-import Link, { LinkProps } from "next/link";
+import Link, { LinkProps } from 'next/link';
 
 interface IPrimaryButton {
   children: React.ReactNode;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
   href?: LinkProps['href'];
   clasName?: string;
 }
 
 export const PrimaryButton = ({ children, type, onClick, href, clasName }: IPrimaryButton) => {
-
   return (
     <>
       {href ? (
@@ -29,5 +28,5 @@ export const PrimaryButton = ({ children, type, onClick, href, clasName }: IPrim
         </button>
       )}
     </>
-  )
-}
+  );
+};

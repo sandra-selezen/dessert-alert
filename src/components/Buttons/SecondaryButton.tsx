@@ -1,8 +1,8 @@
-import Link, { LinkProps } from "next/link";
+import Link, { LinkProps } from 'next/link';
 
 interface ISecondaryButton {
   children: React.ReactNode;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
   href?: LinkProps['href'];
   className?: string;
@@ -16,7 +16,7 @@ export const SecondaryButton = ({ children, type, onClick, href, className }: IS
           href={href}
           className={`rounded-full py-5 px-10 bg-transparent border border-solid border-pink100 hover:shadow-lg shadow-pink transition-shadow font-medium text-pink100 ${className}`}
         >
-            {children}
+          {children}
         </Link>
       ) : (
         <button
@@ -28,5 +28,5 @@ export const SecondaryButton = ({ children, type, onClick, href, className }: IS
         </button>
       )}
     </>
-  )
-}
+  );
+};

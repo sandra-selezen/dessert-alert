@@ -1,7 +1,7 @@
-import React from "react";
-import Image, { StaticImageData } from "next/image";
+import React from 'react';
+import Image, { StaticImageData } from 'next/image';
 
-import { categories } from "@/lib/data";
+import { categories } from '@/lib/data';
 
 export interface ICategory {
   id: number;
@@ -22,7 +22,7 @@ export const Categories = ({ selectedCategory, onSelectCategory }: ICategories) 
       {categories.map((item) => (
         <li
           key={item.id}
-          className={`${selectedCategory.category === item.category ? "border-pink100 shadow-lg shadow-gray" : ""} flex flex-shrink-0 basis-['calc((100%-96px)/7)'] gap-3 items-center p-4 rounded-2xl border border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition`}
+          className={`${selectedCategory.category === item.category ? 'border-pink100 shadow-lg shadow-gray' : ''} flex flex-shrink-0 basis-['calc((100%-96px)/7)'] gap-3 items-center p-4 rounded-2xl border border-grey10 hover:border-pink100 hover:cursor-pointer hover:shadow-lg shadow-gray transition`}
           onClick={() => onSelectCategory(item)}
         >
           <div>
@@ -35,5 +35,5 @@ export const Categories = ({ selectedCategory, onSelectCategory }: ICategories) 
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};

@@ -1,19 +1,19 @@
 export const leftNavLinks = [
   {
-    title: "Home",
-    url: "/"
+    title: 'Home',
+    url: '/',
   },
   {
-    title: "About",
-    url: "/about"
+    title: 'About',
+    url: '/about',
   },
   {
-    title: "Menu",
-    url: "/menu"
+    title: 'Menu',
+    url: '/menu',
   },
   {
-    title: "Blog",
-    url: "/blog"
+    title: 'Blog',
+    url: '/blog',
   },
   // {
   //   title: "My Favorites",
@@ -23,11 +23,11 @@ export const leftNavLinks = [
 
 export const rightNavLinks = [
   {
-    title: "My Cart",
-    url: "/cart"
+    title: 'My Cart',
+    url: '/cart',
   },
   {
-    title: "Contact us",
-    url: "/contact"
+    title: 'Contact us',
+    url: '/contact',
   },
 ];

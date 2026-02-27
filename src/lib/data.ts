@@ -1,66 +1,66 @@
-import chococheeseCake from "/public/images/chococheese-cake.png";
-import pinkDonuts from "/public/images/pink-donuts.png";
-import chocoCake from "/public/images/choco-cake.png";
-import sweetCake from "/public/images/sweet-cake.png";
-import pinkSweet from "/public/images/pink-sweet.png";
-import chocoCookies from "/public/images/choco-cookies.png";
-import sweetDonuts from "/public/images/sweet-donuts.png";
-import sweetChoco from "/public/images/sweet-choco.png";
+import chococheeseCake from '../../public/images/chococheese-cake.png';
+import pinkDonuts from '../../public/images/pink-donuts.png';
+import chocoCake from '../../public/images/choco-cake.png';
+import sweetCake from '../../public/images/sweet-cake.png';
+import pinkSweet from '../../public/images/pink-sweet.png';
+import chocoCookies from '../../public/images/choco-cookies.png';
+import sweetDonuts from '../../public/images/sweet-donuts.png';
+import sweetChoco from '../../public/images/sweet-choco.png';
 
-import cake from "/public/images/cake.png";
-import cupcake from "/public/images/cupcake.png";
-import donut from "/public/images/donut.png";
-import cookie from "/public/images/cookie.png";
-import macaron from "/public/images/macaron.png";
-import drink from "/public/images/drink.png";
-import menuIcon from "/public/images/menu.png";
+import cake from '../../public/images/cake.png';
+import cupcake from '../../public/images/cupcake.png';
+import donut from '../../public/images/donut.png';
+import cookie from '../../public/images/cookie.png';
+import macaron from '../../public/images/macaron.png';
+import drink from '../../public/images/drink.png';
+import menuIcon from '../../public/images/menu.png';
 
 export const popularMenu = [
   {
     id: 1,
-    name: "Chococheese Cake",
+    name: 'Chococheese Cake',
     price: 2.5,
     image: chococheeseCake,
   },
   {
     id: 2,
-    name: "Pink Donuts",
+    name: 'Pink Donuts',
     price: 2.8,
     image: pinkDonuts,
   },
   {
     id: 3,
-    name: "Choco Cake",
+    name: 'Choco Cake',
     price: 2.9,
     image: chocoCake,
   },
   {
     id: 4,
-    name: "Sweet Cake",
+    name: 'Sweet Cake',
     price: 2.3,
     image: sweetCake,
   },
   {
     id: 5,
-    name: "Pink Sweet",
+    name: 'Pink Sweet',
     price: 2.1,
     image: pinkSweet,
   },
   {
     id: 6,
-    name: "Choco Cookies",
+    name: 'Choco Cookies',
     price: 2.8,
     image: chocoCookies,
   },
   {
     id: 7,
-    name: "Sweet Donuts",
+    name: 'Sweet Donuts',
     price: 1.8,
     image: sweetDonuts,
   },
   {
     id: 8,
-    name: "Sweet Choco",
+    name: 'Sweet Choco',
     price: 3.6,
     image: sweetChoco,
   },
@@ -69,166 +69,166 @@ export const popularMenu = [
 export const menu = [
   {
     id: 1,
-    name: "Chococheese Cake",
+    name: 'Chococheese Cake',
     price: 2.5,
     image: chococheeseCake,
-    category: "cakes",
+    category: 'cakes',
   },
   {
     id: 2,
-    name: "Pink Donuts",
+    name: 'Pink Donuts',
     price: 2.8,
     image: pinkDonuts,
-    category: "donuts",
+    category: 'donuts',
   },
   {
     id: 3,
-    name: "Choco Cake",
+    name: 'Choco Cake',
     price: 2.9,
     image: chocoCake,
-    category: "cakes",
+    category: 'cakes',
   },
   {
     id: 4,
-    name: "Sweet Cake",
+    name: 'Sweet Cake',
     price: 2.3,
     image: sweetCake,
-    category: "cupcakes",
+    category: 'cupcakes',
   },
   {
     id: 5,
-    name: "Pink Sweet",
+    name: 'Pink Sweet',
     price: 2.1,
     image: pinkSweet,
-    category: "cupcakes",
+    category: 'cupcakes',
   },
   {
     id: 6,
-    name: "Choco Cookies",
+    name: 'Choco Cookies',
     price: 2.8,
     image: chocoCookies,
-    category: "cookies",
+    category: 'cookies',
   },
   {
     id: 7,
-    name: "Sweet Donuts",
+    name: 'Sweet Donuts',
     price: 1.8,
     image: sweetDonuts,
-    category: "donuts",
+    category: 'donuts',
   },
   {
     id: 8,
-    name: "Sweet Choco",
+    name: 'Sweet Choco',
     price: 3.6,
     image: sweetChoco,
-    category: "cupcakes",
+    category: 'cupcakes',
   },
   {
     id: 9,
-    name: "Chococheese Cake",
+    name: 'Chococheese Cake',
     price: 2.5,
     image: chococheeseCake,
-    category: "cakes",
+    category: 'cakes',
   },
   {
     id: 10,
-    name: "Pink Donuts",
+    name: 'Pink Donuts',
     price: 2.8,
     image: pinkDonuts,
-    category: "donuts",
+    category: 'donuts',
   },
   {
     id: 11,
-    name: "Choco Cake",
+    name: 'Choco Cake',
     price: 2.9,
     image: chocoCake,
-    category: "cakes",
+    category: 'cakes',
   },
   {
     id: 12,
-    name: "Sweet Cake",
+    name: 'Sweet Cake',
     price: 2.3,
     image: sweetCake,
-    category: "cupcakes",
+    category: 'cupcakes',
   },
   {
     id: 13,
-    name: "Pink Sweet",
+    name: 'Pink Sweet',
     price: 2.1,
     image: pinkSweet,
-    category: "cupcakes",
+    category: 'cupcakes',
   },
   {
     id: 14,
-    name: "Choco Cookies",
+    name: 'Choco Cookies',
     price: 2.8,
     image: chocoCookies,
-    category: "cookies",
+    category: 'cookies',
   },
   {
     id: 15,
-    name: "Sweet Donuts",
+    name: 'Sweet Donuts',
     price: 1.8,
     image: sweetDonuts,
-    category: "donuts",
+    category: 'donuts',
   },
   {
     id: 16,
-    name: "Sweet Choco",
+    name: 'Sweet Choco',
     price: 3.6,
     image: sweetChoco,
-    category: "cupcakes",
-  }
+    category: 'cupcakes',
+  },
 ];
 
 export const categories = [
   {
     id: 1,
-    title: "All",
-    subtitle: "200 Menu",
+    title: 'All',
+    subtitle: '200 Menu',
     image: menuIcon,
-    category: "all",
+    category: 'all',
   },
   {
     id: 2,
-    title: "Cakes",
-    subtitle: "24 Menu",
+    title: 'Cakes',
+    subtitle: '24 Menu',
     image: cake,
-    category: "cakes",
+    category: 'cakes',
   },
   {
     id: 3,
-    title: "Cupcakes",
-    subtitle: "25 Menu",
+    title: 'Cupcakes',
+    subtitle: '25 Menu',
     image: cupcake,
-    category: "cupcakes",
+    category: 'cupcakes',
   },
   {
     id: 4,
-    title: "Donuts",
-    subtitle: "35 Menu",
+    title: 'Donuts',
+    subtitle: '35 Menu',
     image: donut,
-    category: "donuts",
+    category: 'donuts',
   },
   {
     id: 5,
-    title: "Cookies",
-    subtitle: "24 Menu",
+    title: 'Cookies',
+    subtitle: '24 Menu',
     image: cookie,
-    category: "cookies",
+    category: 'cookies',
   },
   {
     id: 6,
-    title: "Macarons",
-    subtitle: "25 Menu",
+    title: 'Macarons',
+    subtitle: '25 Menu',
     image: macaron,
-    category: "macarons",
+    category: 'macarons',
   },
   {
     id: 7,
-    title: "Drinks",
-    subtitle: "22 Menu",
+    title: 'Drinks',
+    subtitle: '22 Menu',
     image: drink,
-    category: "drinks",
+    category: 'drinks',
   },
 ];

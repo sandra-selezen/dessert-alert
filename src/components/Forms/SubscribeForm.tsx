@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { Field, Form, Formik, FormikHelpers } from 'formik';
 import { subscribeFormSchema } from '@/lib/schemas';
@@ -6,9 +6,12 @@ import { subscribeFormSchema } from '@/lib/schemas';
 export const SubscribeForm = () => {
   const initialValues = {
     email: '',
-  }
+  };
 
-  const onSubmitForm = (values: { email: string }, formikHelpers: FormikHelpers<{ email: string }>) => {
+  const onSubmitForm = (
+    values: { email: string },
+    formikHelpers: FormikHelpers<{ email: string }>,
+  ) => {
     alert(values.email);
     formikHelpers.resetForm();
   };
@@ -19,16 +22,14 @@ export const SubscribeForm = () => {
       validationSchema={subscribeFormSchema}
       onSubmit={onSubmitForm}
     >
-      <Form
-        className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-5 items-center"
-      >
+      <Form className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-5 items-center">
         <div className="w-full">
           <Field
             required
-            id='email'
-            name='email'
-            type='email'
-            placeholder='Email Address'
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Email Address"
             className="w-full border-white placeholder:text-white text-white"
           />
         </div>
@@ -40,5 +41,5 @@ export const SubscribeForm = () => {
         </button>
       </Form>
     </Formik>
-  )
-}
+  );
+};

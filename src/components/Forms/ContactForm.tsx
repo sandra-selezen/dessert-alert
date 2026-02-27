@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from 'react';
 import { Field, Form, Formik, FormikHelpers } from 'formik';
@@ -7,13 +7,16 @@ import { contactFormSchema } from '@/lib/schemas';
 
 export const ContactForm = () => {
   const initialValues = {
-    name: "",
-    email: "",
-    message: "",
-  }
+    name: '',
+    email: '',
+    message: '',
+  };
 
-  const onSubmitForm = (values: typeof initialValues, formikHelpers: FormikHelpers<typeof initialValues>) => {
-    alert("Your message was sent ✅");
+  const onSubmitForm = (
+    values: typeof initialValues,
+    formikHelpers: FormikHelpers<typeof initialValues>,
+  ) => {
+    alert('Your message was sent ✅');
     formikHelpers.resetForm();
   };
 
@@ -26,26 +29,26 @@ export const ContactForm = () => {
       <Form>
         <Field
           required
-          id='name'
-          name='name'
-          type='text'
-          placeholder='Name'
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Name"
           className="w-full mb-6 border-grey10 placeholder:text-black100 text-black100"
         />
         <Field
           required
-          id='email'
-          name='email'
-          type='email'
-          placeholder='Email Address'
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email Address"
           className="w-full mb-6 border-grey10 placeholder:text-black100 text-black100"
         />
         <Field
-          id='message'
-          name='message'
-          type='text'
-          as='textarea'
-          placeholder='Message'
+          id="message"
+          name="message"
+          type="text"
+          as="textarea"
+          placeholder="Message"
           rows="5"
           className="w-full mb-6 resize-y max-h-[300px] min-h-[120px] border-grey10 placeholder:text-black100 text-black100"
         />
@@ -57,5 +60,5 @@ export const ContactForm = () => {
         </button>
       </Form>
     </Formik>
-  )
-}
+  );
+};

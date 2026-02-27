@@ -1,17 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import logoWhite from "../../../public/images/logo-white.png";
-import appStore from "../../../public/images/app-store.png";
-import googlePlay from "../../../public/images/google-play.png";
-import CallIcon from "../../../public/icons/call.svg";
-import MailIcon from "../../../public/icons/message.svg";
-import Timeicon from "../../../public/icons/time-circle.svg";
-import FacebookIcon from "../../../public/icons/facebook.svg";
-import InstagramIcon from "../../../public/icons/instagram.svg";
-import WhatsappIcon from "../../../public/icons/whatsapp.svg";
-
-import { SubscribeForm } from "../Forms/SubscribeForm";
+import { SubscribeForm } from '../Forms/SubscribeForm';
 
 export const Footer = () => {
   return (
@@ -26,22 +16,34 @@ export const Footer = () => {
         <div className="my-8 lg:my-16 border-t border-white"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <Image src={logoWhite} width={76} height={32} alt="logo" className="mb-10" />
+            <Image
+              src="/images/logo-white.png"
+              width={76}
+              height={32}
+              alt="logo"
+              className="mb-10"
+            />
             <ul className="flex flex-col gap-y-8">
               <li className="flex items-center gap-2">
-                <span><MailIcon /></span>
+                <span>
+                  <img src="icons/message.svg" />
+                </span>
                 <Link href="mailto:example@gmail.com" className="hover:underline">
                   example@gmail.com
                 </Link>
               </li>
               <li className="flex items-center gap-2">
-                <span><CallIcon /></span>
+                <span>
+                  <img src="/icons/call.svg" />
+                </span>
                 <Link href="tel:+12345678910" className="hover:underline">
                   +123 45678910
                 </Link>
               </li>
               <li className="flex items-center gap-2">
-                <span><Timeicon /></span>
+                <span>
+                  <img src="/icons/time-circle.svg" />
+                </span>
                 <span>Monday - Friday, 08 am - 05 pm</span>
               </li>
             </ul>
@@ -51,21 +53,21 @@ export const Footer = () => {
                 className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75 transition-opacity"
                 aria-label="Facebook"
               >
-                <FacebookIcon />
+                <img src="/icons/facebook.svg" />
               </Link>
               <Link
                 href="#"
                 className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75 transition-opacity"
                 aria-label="Instagram"
               >
-                <InstagramIcon />
+                <img src="/icons/instagram.svg" />
               </Link>
               <Link
                 href="#"
                 className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75 transition-opacity"
                 aria-label="WhatsApp"
               >
-                <WhatsappIcon />
+                <img src="/icons/whatsapp.svg" />
               </Link>
             </div>
           </div>
@@ -125,27 +127,36 @@ export const Footer = () => {
           <div>
             <h3 className="text-xl font-fredoka font-semibold mb-6">Download Our App</h3>
             <div>
-              <Link
-                href="#"
-                className="block mb-6"
-                aria-label="Google Play"
-              >
-                <Image src={googlePlay} width={145} height={44} alt="Google Play" className="w-40" />
+              <Link href="#" className="block mb-6" aria-label="Google Play">
+                <Image
+                  src="/images/google-play.png"
+                  width={145}
+                  height={44}
+                  alt="Google Play"
+                  className="w-40"
+                />
               </Link>
-              <Link
-                href="#"
-                className="block"
-                aria-label="App Store"
-              >
-                <Image src={appStore} width={145} height={44} alt="App Store" className="w-40" />
+              <Link href="#" className="block" aria-label="App Store">
+                <Image
+                  src="/images/app-store.png"
+                  width={145}
+                  height={44}
+                  alt="App Store"
+                  className="w-40"
+                />
               </Link>
             </div>
           </div>
         </div>
       </div>
       <div className="author">
-        <p>Developed with 💙💛 by <Link href={"https://github.com/sandra-selezen"} target="_blank" rel="noopener">Sandra Selezen</Link></p>
+        <p>
+          Developed with 💙💛 by{' '}
+          <Link href={'https://github.com/sandra-selezen'} target="_blank" rel="noopener">
+            Sandra Selezen
+          </Link>
+        </p>
       </div>
     </footer>
-  )
-}
+  );
+};
