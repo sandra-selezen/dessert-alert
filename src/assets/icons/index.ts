@@ -1,0 +1,17 @@
+export { default as BuyIcon } from './buy.svg';
+export { default as CallPinkIcon } from './call-pink.svg';
+export { default as CallIcon } from './call.svg';
+export { default as CategoryIcon } from './category.svg';
+export { default as CloseIcon } from './close.svg';
+export { default as DeleteIcon } from './delete.svg';
+export { default as FacebookIcon } from './facebook.svg';
+export { default as FastForwardIcon } from './fast-forward-3.svg';
+export { default as FavoriteFullIcon } from './favorite-full.svg';
+export { default as FavoriteIcon } from './favorite.svg';
+export { default as InstagramIcon } from './instagram.svg';
+export { default as MailPinkIcon } from './mail-pink.svg';
+export { default as MenuIcon } from './menu.svg';
+export { default as MessageIcon } from './message.svg';
+export { default as TimeCircleIcon } from './time-circle.svg';
+export { default as TimePinkIcon } from './time-pink.svg';
+export { default as WhatsappIcon } from './whatsapp.svg';

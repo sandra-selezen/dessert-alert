@@ -7,11 +7,12 @@ import { PrimaryButton } from '@/components/Buttons/PrimaryButton';
 import { SecondaryButton } from '@/components/Buttons/SecondaryButton';
 import { PopularMenu } from '@/components/PopularMenu/PopularMenu';
 import { HappyCustomer } from '@/components/HappyCustomer/HappyCustomer';
+import { FastForwardIcon } from '@/assets/icons';
 
 export default function Home() {
   return (
     <main>
-      <section className="bg-pink10">
+      <section className="bg-pink10 pt-14">
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center py-12 md:py-20 px-4">
           <div>
             <p className="mb-2 text-2xl font-fredoka font-semibold text-pink100">
@@ -188,7 +189,7 @@ export default function Home() {
                   href="#"
                   className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity"
                 >
-                  Read More <img src="/icons/fast-forward-3.svg" />
+                  Read More <FastForwardIcon className="h-6 w-6" />
                 </Link>
               </div>
             </div>
@@ -210,7 +211,7 @@ export default function Home() {
                   href="#"
                   className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity"
                 >
-                  Read More <img src="/icons/fast-forward-3.svg" />
+                  Read More <FastForwardIcon className="h-6 w-6" />
                 </Link>
               </div>
             </div>
@@ -232,7 +233,7 @@ export default function Home() {
                   href="#"
                   className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity"
                 >
-                  Read More <img src="/icons/fast-forward-3.svg" />
+                  Read More <FastForwardIcon className="h-6 w-6" />
                 </Link>
               </div>
             </div>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 
+import { FavoriteIcon } from '@/assets/icons';
 import { PrimaryButton } from '../Buttons/PrimaryButton';
 
 interface IMenuItemProps {
@@ -111,7 +112,7 @@ export const MenuItem = ({ item }: IMenuItemProps) => {
             onClick={addToFavorites}
             className="p-2 w-[60px] h-[60px] flex justify-center items-center rounded-full bg-transparent border border-solid border-pink100"
           >
-            <img src="/icons/favorite.svg" />
+            <FavoriteIcon className="h-6 w-6" />
           </button>
         </div>
       </div>

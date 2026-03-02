@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useViewport } from '@/hooks';
 
 import { PrimaryButton } from '@/components/Buttons/PrimaryButton';
+import { DeleteIcon } from '@/assets/icons';
 
 export interface ICart {
   item: {
@@ -64,7 +65,7 @@ const MyCartPage = () => {
 
   return (
     <main>
-      <section className="bg-pink10">
+      <section className="bg-pink10 pt-14">
         <div className="container mx-auto text-center py-16 lg:py-20">
           <p className="font-fredoka font-semibold text-black50">
             Home <span className="text-pink100">/ My Cart</span>
@@ -129,7 +130,7 @@ const MyCartPage = () => {
                         title="Delete"
                         className="w-[40px] h-[40px] lg:w-[54px] lg:h-[54px] rounded-full p-2 bg-pink10 flex items-center justify-center"
                       >
-                        <img src="/icons/delete.svg" />
+                        <DeleteIcon className="h-6 w-6" />
                       </button>
                     </td>
                   </tr>

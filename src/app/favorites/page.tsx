@@ -5,6 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
 import { SecondaryButton } from '@/components/Buttons/SecondaryButton';
+import { FavoriteFullIcon } from '@/assets/icons';
 
 interface IFavorite {
   id: number;
@@ -31,7 +32,7 @@ const FavoritesPage = () => {
 
   return (
     <main>
-      <section className="bg-pink10">
+      <section className="bg-pink10 pt-14">
         <div className="container mx-auto text-center py-16 lg:py-20">
           <p className="font-fredoka font-semibold text-black50">
             Home <span className="text-pink100">/ Favorites</span>
@@ -48,7 +49,7 @@ const FavoritesPage = () => {
                   onClick={() => removeFromFavorites(item.id)}
                   className="w-[40px] h-[40px] p-1 flex justify-center items-center rounded-full bg-transparent border border-solid border-pink100 absolute right-0"
                 >
-                  <img src="/icons/favorite-full.svg" />
+                  <FavoriteFullIcon className="h-6 w-6" />
                 </button>
                 <Image src={item.image} width={150} height={150} alt={item.name} className="mb-3" />
                 <Link href={`/menu/${item.id}`} className="mb-2 font-bold">

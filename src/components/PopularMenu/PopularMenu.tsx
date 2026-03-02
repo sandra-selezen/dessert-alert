@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { popularMenu } from '@/lib/data';
 import { ICart } from '@/app/cart/page';
+import { BuyIcon, FavoriteIcon } from '@/assets/icons';
 import { SecondaryButton } from '../Buttons/SecondaryButton';
 
 interface IMenuItem {
@@ -60,14 +61,14 @@ export const PopularMenu = () => {
                 onClick={() => addToFavorites(item)}
                 className="p-2 flex justify-center items-center rounded-full bg-transparent border border-solid border-pink100"
               >
-                <img src="/icons/favorite.svg" />
+                <FavoriteIcon className="h-6 w-6" />
               </button>
               <button
                 onClick={() => addToCart(item)}
                 className="flex justify-center items-center rounded-full py-3 px-5 md:px-10 bg-pink100 text-white hover:shadow-lg shadow-pink transition-shadow font-medium"
               >
                 <span className="md:hidden">
-                  <img src="/icons/buy.svg" className="fill-white" />
+                  <BuyIcon className="fill-white h-6 w-6" />
                 </span>
                 <span className="hidden md:block">Add to Cart</span>
               </button>

@@ -1,6 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import {
+  CallIcon,
+  FacebookIcon,
+  InstagramIcon,
+  MessageIcon,
+  TimeCircleIcon,
+  WhatsappIcon,
+} from '@/assets/icons';
 import { SubscribeForm } from '../Forms/SubscribeForm';
 
 export const Footer = () => {
@@ -26,7 +34,7 @@ export const Footer = () => {
             <ul className="flex flex-col gap-y-8">
               <li className="flex items-center gap-2">
                 <span>
-                  <img src="icons/message.svg" />
+                  <MessageIcon className="h-6 w-6" />
                 </span>
                 <Link href="mailto:example@gmail.com" className="hover:underline">
                   example@gmail.com
@@ -34,7 +42,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <span>
-                  <img src="/icons/call.svg" />
+                  <CallIcon className="h-6 w-6" />
                 </span>
                 <Link href="tel:+12345678910" className="hover:underline">
                   +123 45678910
@@ -42,7 +50,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <span>
-                  <img src="/icons/time-circle.svg" />
+                  <TimeCircleIcon className="h-6 w-6" />
                 </span>
                 <span>Monday - Friday, 08 am - 05 pm</span>
               </li>
@@ -53,21 +61,21 @@ export const Footer = () => {
                 className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75 transition-opacity"
                 aria-label="Facebook"
               >
-                <img src="/icons/facebook.svg" />
+                <FacebookIcon className="h-6 w-6" />
               </Link>
               <Link
                 href="#"
                 className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75 transition-opacity"
                 aria-label="Instagram"
               >
-                <img src="/icons/instagram.svg" />
+                <InstagramIcon className="h-6 w-6" />
               </Link>
               <Link
                 href="#"
                 className="w-8 h-8 p-1 flex items-center justify-center rounded-full bg-white/10 hover:opacity-75 transition-opacity"
                 aria-label="WhatsApp"
               >
-                <img src="/icons/whatsapp.svg" />
+                <WhatsappIcon className="h-6 w-6" />
               </Link>
             </div>
           </div>

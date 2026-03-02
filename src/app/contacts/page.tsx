@@ -3,11 +3,12 @@
 import Link from 'next/link';
 
 import { ContactForm } from '@/components/Forms/ContactForm';
+import { CallPinkIcon, MailPinkIcon, TimePinkIcon } from '@/assets/icons';
 
 const ContactsPage = () => {
   return (
     <main>
-      <section className="bg-pink10">
+      <section className="bg-pink10 pt-14">
         <div className="container mx-auto text-center py-16 lg:py-20">
           <p className="font-fredoka font-semibold text-black50">
             Home <span className="text-pink100">/ Contact us</span>
@@ -28,7 +29,7 @@ const ContactsPage = () => {
             <ul className="flex flex-col gap-y-6 mt-8">
               <li className="flex items-center gap-2">
                 <span>
-                  <img src="/icons/mail-pink.svg" />
+                  <MailPinkIcon className="h-6 w-6" />
                 </span>
                 <Link href="mailto:example@gmail.com" className="hover:underline">
                   example@gmail.com
@@ -36,7 +37,7 @@ const ContactsPage = () => {
               </li>
               <li className="flex items-center gap-2">
                 <span>
-                  <img src="/icons/call-pink.svg" />
+                  <CallPinkIcon className="h-6 w-6" />
                 </span>
                 <Link href="tel:+12345678910" className="hover:underline">
                   +123 45678910
@@ -44,7 +45,7 @@ const ContactsPage = () => {
               </li>
               <li className="flex items-center gap-2">
                 <span>
-                  <img src="/icons/time-pink.svg" />
+                  <TimePinkIcon className="h-6 w-6" />
                 </span>
                 <span>Monday - Friday, 08 am - 05 pm</span>
               </li>

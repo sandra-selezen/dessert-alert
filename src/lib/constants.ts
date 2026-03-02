@@ -15,19 +15,19 @@ export const leftNavLinks = [
     title: 'Blog',
     url: '/blog',
   },
-  // {
-  //   title: "My Favorites",
-  //   url: "/favorites"
-  // },
 ];
 
 export const rightNavLinks = [
+  {
+    title: "My Favorites",
+    url: "/favorites"
+  },
   {
     title: 'My Cart',
     url: '/cart',
   },
   {
     title: 'Contact us',
-    url: '/contact',
+    url: '/contacts',
   },
 ];

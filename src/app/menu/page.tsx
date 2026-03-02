@@ -32,7 +32,7 @@ const MenuContent = () => {
 
   return (
     <main>
-      <section className="bg-pink10">
+      <section className="bg-pink10 pt-14">
         <div className="container mx-auto text-center py-16 lg:py-20">
           <p className="font-fredoka font-semibold text-black50">
             Home <span className="text-pink100">/ Menu</span>
