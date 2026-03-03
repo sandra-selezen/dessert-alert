@@ -18,7 +18,7 @@ interface ICategories {
 
 export const Categories = ({ selectedCategory, onSelectCategory }: ICategories) => {
   return (
-    <ul className="flex md:flex-col gap-4 max-[767px]:overflow-x-scroll">
+    <ul className="flex md:flex-col gap-4 max-[767px]:overflow-x-scroll no-scrollbar">
       {categories.map((item) => (
         <li
           key={item.id}

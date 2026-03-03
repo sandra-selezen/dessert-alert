@@ -23,7 +23,7 @@ export const Header = () => {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 bg-pink10">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
+        <div className="container mx-auto flex items-center justify-between px-6 py-6">
           {/* Logo */}
           <Link href="/" aria-label="Home" className="shrink-0">
             <Image src="/images/logo-black.png" width={76} height={32} alt="logo" />
