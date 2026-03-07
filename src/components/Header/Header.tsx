@@ -75,75 +75,79 @@ export const Header = () => {
         </div>
       </header>
 
-      {/* Mobile menu overlay */}
-      {open && (
-        <div className="fixed inset-0 z-[60] md:hidden">
-          <div className="absolute inset-0 bg-white" onClick={() => setOpen(false)} />
-          <div
-            className="absolute inset-0 opacity-10 pointer-events-none"
-            style={{
-              backgroundImage: 'url(/images/bg-hero-02.png)',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundSize: 'contain',
-            }}
-          />
+      {/* Mobile menu */}
+      <div
+        className={`
+          fixed inset-x-0 h-screen z-[60] md:hidden bg-white
+          transition-all duration-400 ease-in-out
+          ${open ? 'top-0' : '-top-full'}
+        `}
+      >
+        <div className="absolute inset-0 bg-white" onClick={() => setOpen(false)} />
+        <div
+          className="absolute inset-0 opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: 'url(/images/bg-hero-02.png)',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'contain',
+          }}
+        />
 
-          <div className="relative h-full overflow-y-auto px-6 py-6">
-            <div className="flex items-center justify-between">
-              <Link href="/" aria-label="Home" onClick={() => setOpen(false)}>
-                <Image src="/images/logo-black.png" width={76} height={32} alt="logo" />
-              </Link>
+        <div className="relative h-full overflow-y-auto px-6 py-6">
+          <div className="flex items-center justify-between">
+            <Link href="/" aria-label="Home" onClick={() => setOpen(false)}>
+              <Image src="/images/logo-black.png" width={76} height={32} alt="logo" />
+            </Link>
 
-              <button
-                type="button"
-                aria-label="Close menu"
-                onClick={() => setOpen(false)}
-                className="h-12 w-12 grid place-items-center"
-              >
-                <CloseIcon className="h-7 w-7" />
-              </button>
-            </div>
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+              className="h-12 w-12 grid place-items-center"
+            >
+              <CloseIcon className="h-7 w-7" />
+            </button>
+          </div>
 
-            <nav className="mt-14">
-              <ul className="space-y-10 text-3xl font-medium">
-                {leftNavLinks.map(({ title, url }) => (
-                  <li key={title}>
-                    <Link
-                      href={url}
-                      onClick={() => setOpen(false)}
-                      className="hover:opacity-70 transition-opacity"
-                    >
-                      {title}
-                    </Link>
-                  </li>
-                ))}
-
-                <li className="pt-2">
+          <nav className="mt-14">
+            <ul className="space-y-10 text-3xl font-medium">
+              {leftNavLinks.map(({ title, url }) => (
+                <li key={title}>
                   <Link
-                    href="/favorites"
+                    href={url}
                     onClick={() => setOpen(false)}
-                    className="flex items-center gap-4 hover:opacity-70 transition-opacity"
+                    className="hover:opacity-70 transition-opacity"
                   >
-                    <FavoriteIcon className="h-7 w-7" />
-                    <span>My Favorites</span>
+                    {title}
                   </Link>
                 </li>
-              </ul>
+              ))}
 
-              <div className="mt-14">
+              <li className="pt-2">
                 <Link
-                  href="/contacts"
+                  href="/favorites"
                   onClick={() => setOpen(false)}
-                  className="block w-full rounded-full border border-black/40 py-4 text-center text-xl hover:bg-black/5 transition-colors"
+                  className="flex items-center gap-4 hover:opacity-70 transition-opacity"
                 >
-                  Contact us
+                  <FavoriteIcon className="h-7 w-7" />
+                  <span>My Favorites</span>
                 </Link>
-              </div>
-            </nav>
-          </div>
+              </li>
+            </ul>
+
+            <div className="mt-14">
+              <Link
+                href="/contacts"
+                onClick={() => setOpen(false)}
+                className="block w-full rounded-full border border-black/40 py-4 text-center text-xl hover:bg-black/5 transition-colors"
+              >
+                Contact us
+              </Link>
+            </div>
+          </nav>
         </div>
-      )}
+      </div>
     </>
   );
 };
