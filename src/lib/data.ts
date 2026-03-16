@@ -1,19 +1,28 @@
-import chococheeseCake from '../../public/images/chococheese-cake.png';
-import pinkDonuts from '../../public/images/pink-donuts.png';
-import chocoCake from '../../public/images/choco-cake.png';
-import sweetCake from '../../public/images/sweet-cake.png';
-import pinkSweet from '../../public/images/pink-sweet.png';
-import chocoCookies from '../../public/images/choco-cookies.png';
-import sweetDonuts from '../../public/images/sweet-donuts.png';
-import sweetChoco from '../../public/images/sweet-choco.png';
-
-import cake from '../../public/images/cake.png';
-import cupcake from '../../public/images/cupcake.png';
-import donut from '../../public/images/donut.png';
-import cookie from '../../public/images/cookie.png';
-import macaron from '../../public/images/macaron.png';
-import drink from '../../public/images/drink.png';
-import menuIcon from '../../public/images/menu.png';
+import {
+  blog1,
+  blog10,
+  blog11,
+  blog12,
+  blog2,
+  blog3,
+  blog4,
+  blog5,
+  blog6,
+  blog7,
+  blog8,
+  blog9,
+} from '@/assets/images/blog';
+import { cake, cookie, cupcake, donut, drink, macaron, menuIcon } from '@/assets/images/categories';
+import {
+  chocoCake,
+  chococheeseCake,
+  chocoCookies,
+  pinkDonuts,
+  pinkSweet,
+  sweetCake,
+  sweetChoco,
+  sweetDonuts,
+} from '@/assets/images/menu';
 
 export const popularMenu = [
   {
@@ -230,5 +239,71 @@ export const categories = [
     subtitle: '22 Menu',
     image: drink,
     category: 'drinks',
+  },
+];
+
+export const latestPost = [
+  {
+    id: 1,
+    title: 'How To Cook The Sweet Cupcakes with Strawberry Honey',
+    image: blog1,
+  },
+  {
+    id: 2,
+    title: 'Donut topping recommendations for donut lovers',
+    image: blog2,
+  },
+  {
+    id: 3,
+    title: 'How To Cook The Sweet Macarons with Strawberry Cream',
+    image: blog3,
+  },
+  {
+    id: 4,
+    title: 'Navigating Food Deserts: A Comprehensive Guide',
+    image: blog4,
+  },
+  {
+    id: 5,
+    title: 'Exploring the Impact of Food Deserts on Health',
+    image: blog5,
+  },
+  {
+    id: 6,
+    title: 'Fresh Food on Wheels: Mobile Markets Revolutionizing Access',
+    image: blog6,
+  },
+];
+
+export const popularPost = [
+  {
+    id: 7,
+    title: 'Promoting Nutrition Education in Underserved Areas',
+    image: blog7,
+  },
+  {
+    id: 8,
+    title: 'Healthy Eating on a Budget: Tips for Food Desert Residents',
+    image: blog8,
+  },
+  {
+    id: 9,
+    title: 'From Food Desert to Food Oasis: Inspiring Success Stories',
+    image: blog9,
+  },
+  {
+    id: 10,
+    title: 'Urban Farming: Growing Solutions for Food Deserts',
+    image: blog10,
+  },
+  {
+    id: 11,
+    title: 'The Role of Technology in Alleviating Food Deserts',
+    image: blog11,
+  },
+  {
+    id: 12,
+    title: 'The Intersection of Food Deserts and Public Healt',
+    image: blog12,
   },
 ];

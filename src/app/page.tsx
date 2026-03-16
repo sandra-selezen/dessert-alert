@@ -8,6 +8,7 @@ import { SecondaryButton } from '@/components/Buttons/SecondaryButton';
 import { PopularMenu } from '@/components/PopularMenu/PopularMenu';
 import { HappyCustomer } from '@/components/HappyCustomer/HappyCustomer';
 import { FastForwardIcon } from '@/assets/icons';
+import { blog1, blog2, blog3 } from '@/assets/images/blog';
 
 export default function Home() {
   return (
@@ -174,7 +175,7 @@ export default function Home() {
         <ul className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <li className="flex flex-col">
             <Image
-              src="/images/blog-01.png"
+              src={blog1}
               width={343}
               height={250}
               alt="Cupcakes"
@@ -196,7 +197,7 @@ export default function Home() {
           </li>
           <li className="flex flex-col">
             <Image
-              src="/images/blog-02.png"
+              src={blog2}
               width={343}
               height={250}
               alt="Donuts"
@@ -218,7 +219,7 @@ export default function Home() {
           </li>
           <li className="flex flex-col">
             <Image
-              src="/images/blog-03.png"
+              src={blog3}
               width={343}
               height={250}
               alt="Macarons"

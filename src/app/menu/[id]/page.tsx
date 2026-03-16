@@ -19,7 +19,7 @@ const MenuDetails = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <main>
-      <div className="container mx-auto mt-10 lg:mt-16 mb-8 lg:mb-16 px-4">
+      <div className="container mx-auto mt-10 lg:mt-16 mb-8 lg:mb-16 px-4 pt-24">
         <p className="font-fredoka font-semibold text-black50">
           Home / Menu <span className="text-pink100">/ Sweet Cake</span>
         </p>
