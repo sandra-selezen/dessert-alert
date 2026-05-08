@@ -10,3 +10,4 @@ export { default as blog9 } from './blog-09.png';
 export { default as blog10 } from './blog-10.png';
 export { default as blog11 } from './blog-11.png';
 export { default as blog12 } from './blog-12.png';
+export { default as author } from './author.png';

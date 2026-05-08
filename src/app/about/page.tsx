@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { HappyCustomer } from '@/components/HappyCustomer/HappyCustomer';
+import Link from 'next/link';
 
 const AboutPage = () => {
   return (
@@ -8,7 +9,7 @@ const AboutPage = () => {
       <section className="bg-pink10 pt-14">
         <div className="container mx-auto text-center py-16 lg:py-20">
           <p className="font-fredoka font-semibold text-black50">
-            Home <span className="text-pink100">/ About</span>
+            <Link href="/">Home</Link> <span className="text-pink100">/ About</span>
           </p>
           <h1 className="h1">About</h1>
         </div>

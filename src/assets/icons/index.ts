@@ -15,3 +15,6 @@ export { default as MessageIcon } from './message.svg';
 export { default as TimeCircleIcon } from './time-circle.svg';
 export { default as TimePinkIcon } from './time-pink.svg';
 export { default as WhatsappIcon } from './whatsapp.svg';
+export { default as LinkedInIcon } from './logo-linkedin.svg';
+export { default as TelegramIcon } from './logo-telegram.svg';
+export { default as TwitterIcon } from './logo-twitter.svg';

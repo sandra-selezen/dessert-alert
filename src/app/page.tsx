@@ -1,14 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { categories } from '@/lib/data';
+import { categories, latestPost } from '@/lib/data';
 
 import { PrimaryButton } from '@/components/Buttons/PrimaryButton';
 import { SecondaryButton } from '@/components/Buttons/SecondaryButton';
 import { PopularMenu } from '@/components/PopularMenu/PopularMenu';
 import { HappyCustomer } from '@/components/HappyCustomer/HappyCustomer';
 import { FastForwardIcon } from '@/assets/icons';
-import { blog1, blog2, blog3 } from '@/assets/images/blog';
 
 export default function Home() {
   return (
@@ -93,7 +92,13 @@ export default function Home() {
           </div>
 
           <div>
-            <Image src="/images/bg-hero-02.png" height={722} width={690} alt="cupcake" />
+            <Image
+              src="/images/bg-hero-02.png"
+              height={722}
+              width={690}
+              alt="cupcake"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
@@ -173,72 +178,30 @@ export default function Home() {
         </p>
         <h2 className="h2 mb-10 lg:mb-16 text-center">Latest Post</h2>
         <ul className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <li className="flex flex-col">
-            <Image
-              src={blog1}
-              width={343}
-              height={250}
-              alt="Cupcakes"
-              className="w-full object-cover"
-            />
-            <div className="flex-grow flex flex-col justify-between mt-6">
-              <h3 className="text-xl/9 font-semibold mb-6 break-words line-clamp-2">
-                How To Cook The Sweet Cupcakes with Strawberry Honey
-              </h3>
-              <div className="mt-auto">
-                <Link
-                  href="#"
-                  className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity"
-                >
-                  Read More <FastForwardIcon className="h-6 w-6" />
-                </Link>
+          {latestPost.slice(0, 3).map((post) => (
+            <li key={post.id} className="flex flex-col">
+              <Image
+                src={post.image}
+                width={343}
+                height={250}
+                alt=""
+                className="w-full object-cover"
+              />
+              <div className="flex-grow flex flex-col justify-between mt-6">
+                <h3 className="text-xl/9 font-semibold mb-6 break-words line-clamp-2">
+                  {post.title}
+                </h3>
+                <div className="mt-auto">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity"
+                  >
+                    Read More <FastForwardIcon className="h-6 w-6" />
+                  </Link>
+                </div>
               </div>
-            </div>
-          </li>
-          <li className="flex flex-col">
-            <Image
-              src={blog2}
-              width={343}
-              height={250}
-              alt="Donuts"
-              className="w-full object-cover"
-            />
-            <div className="flex-grow flex flex-col justify-between mt-6">
-              <h3 className="text-xl/9 font-semibold mb-6 break-words line-clamp-2">
-                Donut topping recommendations for donut lovers
-              </h3>
-              <div className="mt-auto">
-                <Link
-                  href="#"
-                  className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity"
-                >
-                  Read More <FastForwardIcon className="h-6 w-6" />
-                </Link>
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col">
-            <Image
-              src={blog3}
-              width={343}
-              height={250}
-              alt="Macarons"
-              className="w-full object-cover"
-            />
-            <div className="flex-grow flex flex-col justify-between mt-6">
-              <h3 className="text-xl/9 font-semibold mb-6 break-words line-clamp-2">
-                How To Cook The Sweet Macarons with Strawberry Cream
-              </h3>
-              <div className="mt-auto">
-                <Link
-                  href="#"
-                  className="flex items-center gap-2 font-fredoka font-semibold text-pink100 hover:opacity-75 transition-opacity"
-                >
-                  Read More <FastForwardIcon className="h-6 w-6" />
-                </Link>
-              </div>
-            </div>
-          </li>
+            </li>
+          ))}
         </ul>
       </section>
     </main>
