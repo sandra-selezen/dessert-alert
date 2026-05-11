@@ -15,6 +15,11 @@ interface IMenuItemProps {
   };
 }
 
+interface IStoredCartItem {
+  itemId: number;
+  quantity: number;
+}
+
 export const MenuItem = ({ item }: IMenuItemProps) => {
   const [quantity, setQuantity] = useState(1);
 
@@ -29,13 +34,17 @@ export const MenuItem = ({ item }: IMenuItemProps) => {
   };
 
   const addToCart = () => {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    const existingItemIndex = cart.findIndex((cartItem: any) => cartItem.item.id === item.id);
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]') as IStoredCartItem[];
+
+    const existingItemIndex = cart.findIndex((cartItem) => cartItem.itemId === item.id);
 
     if (existingItemIndex !== -1) {
       cart[existingItemIndex].quantity += quantity;
     } else {
-      cart.push({ item, quantity });
+      cart.push({
+        itemId: item.id,
+        quantity,
+      });
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -43,10 +52,12 @@ export const MenuItem = ({ item }: IMenuItemProps) => {
   };
 
   const addToFavorites = () => {
-    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-    const existingItem = favorites.find((favorite: any) => favorite.id === item.id);
-    if (!existingItem) {
-      favorites.push(item);
+    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]') as number[];
+
+    const isAlreadyFavorite = favorites.includes(item.id);
+
+    if (!isAlreadyFavorite) {
+      favorites.push(item.id);
       localStorage.setItem('favorites', JSON.stringify(favorites));
       alert('Added to Favorites!');
     } else {
@@ -65,12 +76,17 @@ export const MenuItem = ({ item }: IMenuItemProps) => {
           className="mx-auto w-full h-auto lg:w-[522px]"
         />
       </div>
+
       <div className="basis-1/2">
         <h1 className="mb-4 lg:mb-8 font-bold text-4xl lg:text-6xl">{item.name}</h1>
+
         <p className="font-bold text-2xl mb-1">Price</p>
+
         <span className="font-fredoka font-semibold text-xl text-pink100">${item.price}</span>
+
         <div className="mt-8">
           <h3 className="font-bold text-2xl mb-2">Description</h3>
+
           <p className="text-black50 text-base/8">
             From classic favorites to unique creations, our cake menu at Fofood offers a delectable
             selection of sweet treats that will satisfy your cravings. Indulge in moist and fluffy
@@ -82,20 +98,26 @@ export const MenuItem = ({ item }: IMenuItemProps) => {
             creations and let our cakes be the highlight of your sweet moments.
           </p>
         </div>
+
         <div className="my-6 flex items-center">
           <h3 className="font-bold text-2xl mr-3">Quantity:</h3>
+
           <div className="flex">
             <button
-              className="w-[43px] h-[43px] border-l border-t border-b rounded-tl rounded-bl border-light-gray"
+              type="button"
+              className="w-[43px] h-[43px] border-l border-t border-b rounded-tl rounded-bl border-light-gray disabled:cursor-not-allowed disabled:opacity-50"
               onClick={decreaseQuantity}
               disabled={quantity === 1}
             >
               <span className="text-2xl">-</span>
             </button>
+
             <span className="w-[43px] h-[43px] flex items-center justify-center text-2xl border border-light-gray">
               {quantity}
             </span>
+
             <button
+              type="button"
               className="w-[43px] h-[43px] border-r border-t border-b rounded-tr rounded-br border-light-gray"
               onClick={increaseQuantity}
             >
@@ -103,10 +125,12 @@ export const MenuItem = ({ item }: IMenuItemProps) => {
             </button>
           </div>
         </div>
+
         <div className="flex gap-6 items-center">
           <PrimaryButton type="button" onClick={addToCart} clasName="flex-1">
             Add to Cart
           </PrimaryButton>
+
           <button
             type="button"
             onClick={addToFavorites}

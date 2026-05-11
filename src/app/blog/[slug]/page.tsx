@@ -11,7 +11,16 @@ interface BlogPostPageProps {
   };
 }
 
+const ENABLE_LOADING_DEMO = process.env.NODE_ENV === 'development';
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  // Demo delay for presentation:
+  // shows the blog post skeleton while data is "loading"
+  if (ENABLE_LOADING_DEMO) {
+    await sleep(2000);
+  }
+
   const { slug } = await params;
   const post = await blogPosts.find((post) => post.slug === slug);
 
