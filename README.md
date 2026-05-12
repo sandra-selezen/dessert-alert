@@ -62,4 +62,9 @@ Run the development server:
 ```
 npm run dev
 ```
+## Notes
 
+This is a pet project created for learning and portfolio purposes.
+The data is currently hardcoded, but the structure is prepared so it can be connected to an API or CMS in the future.
+
+Some loading states include a small demo delay to showcase skeleton screens during page transitions.
