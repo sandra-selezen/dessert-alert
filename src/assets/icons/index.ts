@@ -7,6 +7,7 @@ export { default as DeleteIcon } from './delete.svg';
 export { default as FacebookIcon } from './facebook.svg';
 export { default as FastForwardIcon } from './fast-forward-3.svg';
 export { default as FavoriteFullIcon } from './favorite-full.svg';
+export { default as FavoriteLineIcon } from './favorite-black.svg';
 export { default as FavoriteIcon } from './favorite.svg';
 export { default as InstagramIcon } from './instagram.svg';
 export { default as MailPinkIcon } from './mail-pink.svg';

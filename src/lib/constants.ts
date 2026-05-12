@@ -16,18 +16,3 @@ export const leftNavLinks = [
     url: '/blog',
   },
 ];
-
-export const rightNavLinks = [
-  {
-    title: "My Favorites",
-    url: "/favorites"
-  },
-  {
-    title: 'My Cart',
-    url: '/cart',
-  },
-  {
-    title: 'Contact us',
-    url: '/contacts',
-  },
-];

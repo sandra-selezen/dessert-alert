@@ -35,6 +35,7 @@ export const PopularMenu = () => {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
+    window.dispatchEvent(new Event('cart-updated'));
     alert('Product added to cart!');
   };
 

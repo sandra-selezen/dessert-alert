@@ -20,8 +20,31 @@ interface IStoredCartItem {
   quantity: number;
 }
 
+const imageVariants = [
+  {
+    id: 'default',
+    label: 'Default view',
+    imageClassName: '',
+  },
+  {
+    id: 'soft',
+    label: 'Soft view',
+    imageClassName: 'brightness-105 saturate-125',
+  },
+  {
+    id: 'dark',
+    label: 'Dark view',
+    imageClassName: 'brightness-90 contrast-110',
+  },
+];
+
 export const MenuItem = ({ item }: IMenuItemProps) => {
   const [quantity, setQuantity] = useState(1);
+  const [selectedImageVariantId, setSelectedImageVariantId] = useState(imageVariants[0].id);
+
+  const selectedImageVariant = imageVariants.find(
+    (variant) => variant.id === selectedImageVariantId,
+  );
 
   const increaseQuantity = () => {
     setQuantity((prev) => prev + 1);
@@ -48,6 +71,7 @@ export const MenuItem = ({ item }: IMenuItemProps) => {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
+    window.dispatchEvent(new Event('cart-updated'));
     alert('Product added to cart!');
   };
 
@@ -68,13 +92,39 @@ export const MenuItem = ({ item }: IMenuItemProps) => {
   return (
     <>
       <div className="basis-1/2">
-        <Image
-          src={item.image}
-          width={343}
-          height={343}
-          alt={item.name}
-          className="mx-auto w-full h-auto lg:w-[522px]"
-        />
+        <div className="flex flex-col items-center">
+          <div className="relative flex w-full items-center justify-center overflow-hidden px-6 py-10 md:px-10 lg:min-h-[560px]">
+            <Image
+              src={item.image}
+              width={343}
+              height={343}
+              alt={item.name}
+              className={`mx-auto h-auto w-full transition-all duration-300 lg:w-[522px] ${
+                selectedImageVariant?.imageClassName || ''
+              }`}
+            />
+          </div>
+
+          <div className="mt-6 flex items-center justify-center gap-3">
+            {imageVariants.map((variant) => {
+              const isActive = selectedImageVariantId === variant.id;
+
+              return (
+                <button
+                  key={variant.id}
+                  type="button"
+                  onClick={() => setSelectedImageVariantId(variant.id)}
+                  aria-label={variant.label}
+                  className={`h-4 w-4 rounded-full transition-all duration-200 ${
+                    isActive
+                      ? 'scale-110 bg-pink100'
+                      : 'bg-pink100/30 hover:scale-110 hover:bg-pink100/60'
+                  }`}
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
 
       <div className="basis-1/2">

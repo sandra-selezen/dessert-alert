@@ -4,11 +4,30 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { leftNavLinks, rightNavLinks } from '@/lib/constants';
-import { BuyIcon, CloseIcon, FavoriteIcon, MenuIcon } from '@/assets/icons';
+import { leftNavLinks } from '@/lib/constants';
+import { getCartCount } from '@/lib/utils';
+import { BuyIcon, CloseIcon, FavoriteIcon, FavoriteLineIcon, MenuIcon } from '@/assets/icons';
+import { CartBadge } from '../CartBadge/CartBadge';
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    const updateCartCount = () => {
+      setCartCount(getCartCount());
+    };
+
+    updateCartCount();
+
+    window.addEventListener('storage', updateCartCount);
+    window.addEventListener('cart-updated', updateCartCount);
+
+    return () => {
+      window.removeEventListener('storage', updateCartCount);
+      window.removeEventListener('cart-updated', updateCartCount);
+    };
+  }, []);
 
   // lock body scroll when menu is open
   useEffect(() => {
@@ -41,15 +60,35 @@ export const Header = () => {
               ))}
             </ul>
 
-            <ul className="flex gap-12">
-              {rightNavLinks.map(({ title, url }) => (
-                <li key={title}>
-                  <Link href={url} className="hover:opacity-70 transition-opacity">
-                    {title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-center gap-8">
+              <Link
+                href="/favorites"
+                className="flex items-center gap-3 hover:opacity-70 transition-opacity"
+              >
+                <FavoriteLineIcon className="h-6 w-6" />
+                <span>My Favorites</span>
+              </Link>
+
+              <span className="h-10 w-px bg-black100/20" />
+
+              <Link
+                href="/cart"
+                className="relative flex items-center gap-3 hover:opacity-70 transition-opacity"
+              >
+                <span className="relative">
+                  <BuyIcon className="h-6 w-6 fill-black100" />
+                  <CartBadge count={cartCount} variant="desktop" />
+                </span>
+                <span>My Cart</span>
+              </Link>
+
+              <Link
+                href="/contacts"
+                className="rounded-full border border-black100 px-8 py-3 hover:bg-white/40 transition-colors"
+              >
+                Contact us
+              </Link>
+            </div>
           </nav>
 
           {/* Mobile actions */}
@@ -57,9 +96,10 @@ export const Header = () => {
             <Link
               href="/cart"
               aria-label="Cart"
-              className="h-12 w-12 grid place-items-center rounded-xl border border-black100"
+              className="relative h-12 w-12 grid place-items-center rounded-xl border border-black100"
             >
               <BuyIcon className="h-6 w-6 fill-black100" />
+              <CartBadge count={cartCount} />
             </Link>
 
             <button

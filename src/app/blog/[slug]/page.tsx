@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts, latestPost } from '@/lib/data';
+import { ENABLE_LOADING_DEMO, sleep } from '@/lib/utils';
 import { author } from '@/assets/images/blog';
 import { FastForwardIcon, LinkedInIcon, TelegramIcon, TwitterIcon } from '@/assets/icons';
 
@@ -10,9 +11,6 @@ interface BlogPostPageProps {
     slug: string;
   };
 }
-
-const ENABLE_LOADING_DEMO = process.env.NODE_ENV === 'development';
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   // Demo delay for presentation:

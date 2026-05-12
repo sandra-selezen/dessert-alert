@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <section className="bg-pink10 pt-14">
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center py-12 md:py-20 px-4">
-          <div>
+          <div className="relative z-10">
             <p className="mb-2 text-2xl font-fredoka font-semibold text-pink100">
               Welcome to Fofood
             </p>
@@ -91,13 +91,23 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className="relative z-10">
             <Image
               src="/images/bg-hero-02.png"
               height={722}
               width={690}
               alt="cupcake"
               loading="eager"
+            />
+          </div>
+          <div className="absolute right-0 top-0 z-9">
+            <Image
+              src="/images/hero-bg-shape.png"
+              alt=""
+              width={653}
+              height={860}
+              className="h-auto w-full"
+              priority
             />
           </div>
         </div>

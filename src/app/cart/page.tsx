@@ -35,16 +35,15 @@ const MyCartPage = () => {
     }));
 
     localStorage.setItem('cart', JSON.stringify(cartToStore));
+    window.dispatchEvent(new Event('cart-updated'));
   };
 
   useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem('cart') || '[]') as Array<IStoredCartItem>;
+    const storedCart = JSON.parse(localStorage.getItem('cart') || '[]') as IStoredCartItem[];
 
     const hydratedCart = storedCart
       .map((cartItem) => {
-        const itemId = cartItem.itemId;
-
-        const product = menu.find((product) => product.id === itemId);
+        const product = menu.find((product) => product.id === cartItem.itemId);
 
         if (!product) return null;
 
@@ -56,7 +55,6 @@ const MyCartPage = () => {
       .filter(Boolean) as ICart[];
 
     setCart(hydratedCart);
-    saveCartToLocalStorage(hydratedCart);
     setIsCartLoaded(true);
   }, []);
 
@@ -103,6 +101,8 @@ const MyCartPage = () => {
     if (cart.length === 0) return;
 
     localStorage.removeItem('cart');
+    window.dispatchEvent(new Event('cart-updated'));
+
     setCart([]);
 
     setNotification('Thank you! Your order has been placed successfully.');
